@@ -6,15 +6,15 @@ import (
 )
 
 func handler(w http.ResponseWriter, r *http.Request) {
-	fmt.Fprint(w, "Hello, World!")
+	fmt.Fprint(w, "Hello, World! welcome to cloud run")
 }
 
 func main() {
-	port := 3000
+	port := 8080
 	fmt.Println("Server is running on port", port)
 
-	http.HandleFunc("/", handler)
-	if err := http.ListenAndServe(":3000", nil); err != nil {
+	http.HandleFunc("/test", handler)
+	if err := http.ListenAndServe(":8080", nil); err != nil {
 		fmt.Println("Server error:", err)
 	}
 }
