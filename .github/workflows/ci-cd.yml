@@ -26,7 +26,7 @@ jobs:
 
       - name: Build and Push Docker Image
         run: |
-          IMAGE="gcr.io/${{ secrets.GCP_PROJECT_ID }}/example-app"
+          IMAGE="eu.gcr.io/${{ secrets.GCP_PROJECT_ID }}/example-app"
           docker build -t $IMAGE .
           docker push $IMAGE
 
